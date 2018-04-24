@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sh \'mvn -B -DskipTests clean package\''
+        sh 'mvn -B -DskipTests clean package'
       }
     }
     stage('Test') {
       steps {
-        sh 'sh \'mvn test\''
+        sh 'mvn test'
       }
     }
     stage('Deliver') {
       steps {
-        sh 'sh \'./jenkins/scripts/deliver.sh\''
+        sh './jenkins/scripts/deliver.sh'
       }
     }
   }
