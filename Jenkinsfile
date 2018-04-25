@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''export M2_HOME=/opt/apache-maven-3.3.9 # your Mavan home path
-'''
+        sh 'export M2_HOME=/Applications/apache-maven-3.5.3'
         sh '''export PATH=$PATH:$M2_HOME/bin
 '''
         sh 'mvn --version'
